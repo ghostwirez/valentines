@@ -25,13 +25,13 @@
             position: relative;
         }
 
-        .heart {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: rgba(255, 105, 180, 0.6);
-            transform: rotate(-45deg);
-            animation: float 6s infinite ease-in-out;
+        .heart { 
+            position: absolute; 
+            width: 20px; 
+            height: 20px; 
+            background: rgba(255, 105, 180, 0.6); 
+            transform: rotate(-45deg); 
+            animation: float 6s infinite ease-in-out; 
         }
 
         .heart::before,
@@ -170,7 +170,7 @@
         }
 
         @keyframes spin {
-            from { transform: rotate(0deg); }
+            from { transform: rotate(-45deg); }
             to { transform: rotate(360deg); }
         }
 
@@ -180,6 +180,47 @@
 
         .show {
             display: block;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 30px;
+                max-width: 90%;
+                border-radius: 20px;
+            }
+
+            .initial-screen h1 {
+                font-size: 2em;
+            }
+
+            .initial-screen p {
+                font-size: 1em;
+            }
+
+            .success-screen h1 {
+                font-size: 2.5em;
+            }
+
+            .success-screen .celebration {
+                font-size: 3em;
+            }
+
+            button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+
+            .heart {
+                width: 15px;
+                height: 15px;
+            }
+
+            .heart::before,
+            .heart::after {
+                width: 15px;
+                height: 15px;
+            }
         }
     </style>
 </head>
